@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quản lý nhân viên</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />git
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--  -->
+    <section class="form-group">
+      <div class="container border p-0">
+        <form action="" class="form">
+          <h2 class="text-center bg-dark text-white p-3">Quản lý nhân viên</h2>
+          <div class="m-4">
+            <p class="m-0">Mã nhân viên</p>
+            <input type="text" class="form-control" id="id" />
+            <p class="text-danger m-0" id="nullErrID"></p>
+            <p class="text-danger m-0" id="numberErrID"></p>
+            <p class="text-danger m-0" id="lengthErrID"></p>
+          </div>
+          <div class="m-4">
+            <p class="m-0">Tên nhân viên</p>
+            <input type="text" class="form-control" id="name" />
+            <p class="text-danger m-0" id="nullErrName"></p>
+            <p class="text-danger m-0" id="letterErrName"></p>
+          </div>
+          <div class="m-4">
+            <p class="m-0">Chức vụ</p>
+            <select name="" id="type" class="form-control">
+              <option value="1">Nhân viên</option>
+              <option value="2">Quản lý</option>
+              <option value="3">Giám đốc</option>
+            </select>
+          </div>
+          <div class="m-4">
+            <p class="m-0">Lương cơ bản</p>
+            <input type="text" class="form-control" id="basicSalary" />
+            <p class="text-danger m-0" id="nullErrBSalary"></p>
+            <p class="text-danger m-0" id="numberErrBSalary"></p>
+            <p class="text-danger m-0" id="valueErrBSalary"></p>
+          </div>
+          <div class="m-4">
+            <p class="m-0">Số giờ làm trong tháng</p>
+            <input type="text" class="form-control" id="timeWork" />
+            <p class="text-danger m-0" id="nullErrTimeWork"></p>
+            <p class="text-danger m-0" id="numberErrTimeWork"></p>
+            <p class="text-danger m-0" id="valueErrTimeWork"></p>
+          </div>
+          <div class="text-right p-3 bg-light">
+            <button class="btn btn-outline-success" id="postBtn" type="button">
+              Thêm nhân viên
+            </button>
+            <button
+              class="btn btn-outline-primary"
+              id="putBtn"
+              type="button"
+              disabled
+            >
+              Chỉnh sửa nhân viên
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="result">
+      <div class="container border p-0">
+        <table class="w-100">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th class="p-3">Mã nhân viên</th>
+              <th class="p-3">Tên nhân viên</th>
+              <th class="p-3">Chức vụ</th>
+              <th class="p-3">Lương cơ bản</th>
+              <th class="p-3">Tổng lương</th>
+              <th class="p-3">Giờ làm/tháng</th>
+              <th class="p-3">Xếp loại nhân viên</th>
+              <th class="p-3"></th>
+              <th class="p-3"></th>
+            </tr>
+          </thead>
+          <tbody id="table-content"></tbody>
+        </table>
+      </div>
+    </section>
+    <!--  -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Optional JavaScript -->
+    <script type="module" src="./controllers/script.js"></script>
+  </body>
+</html>
